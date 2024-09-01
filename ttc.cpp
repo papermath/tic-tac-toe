@@ -1,23 +1,17 @@
 #include <iostream>
 #include <string>
-using namespace std;   
-
-
 
 int main() {
 
-    #These are global variables
+    //These are global variables
 
     int row;
     int column;
     char token = 'x';
     bool draw = false;
-    string Player1 ="";
-    string Player2="";
+    std::string Player1 ="";
+    std::string Player2="";
     char space[3][3] = {{'1', '2', '3'},{'4', '5', '6'}, {'7', '8', '9'}};
-
-    int main() {
-
 
     std::cout << "Enter the name of Player1: \n\n";
     std::cin >> Player1;
@@ -30,34 +24,6 @@ int main() {
 
 
     // Main code here
-
-    while(!functionThree()){  // so here we declare your function, it could be under function one.
-        functionOne();
-        functionTwo();
-        functionThree();
-    }
-
-    if(token=='x' && draw == false){
-        std::cout << Player1 <<" Wins!!" <<endl;
-
-    }
-
-    else if(token=='o' && draw == false){
-        std::cout << Player2 << " Wins!!" <<endl;
-
-    }
-
-    else{
-        std::cout  << "It is a Tie!!" << endl;
-    }
-
-    return 0;
-}
-
-
-
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
-    // This file for main function.
     std::cout << "Welcome to tic-tac-toe! To make a move, type in the number corresponding to the place on the grid below\n";
 
     std::cout << "     |     |   \n";
@@ -70,4 +36,26 @@ int main() {
     std::cout << "  1  |  2  |  3\n";
     std::cout << "     |     |   \n";
  
+    while(!functionThree()){  // so here we declare your function, it could be under function one.
+        functionOne();
+        functionTwo();
+        functionThree();
+    }
+
+    if(token=='x' && draw == false){
+        std::cout << Player1 <<" Wins!!" << std::endl;
+
+    }
+
+    else if(token=='o' && draw == false){
+        std::cout << Player2 << " Wins!!" << std::endl;
+
+    }
+
+    else{
+        std::cout  << "It is a Tie!!" << std::endl;
+    }
+
+    return 0;
+
 }
